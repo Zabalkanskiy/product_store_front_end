@@ -1,0 +1,9 @@
+[package]
+name = "product_store_front"
+version = "0.1.0"
+authors = ["sancos"]
+edition = "2018"
+
+[dependencies]
+yew="*"
+
