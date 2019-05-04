@@ -27,7 +27,7 @@ pub enum Msg {
 }
 
 #[derive(Debug)]
-struct Client;
+pub struct Client;
 
 impl Client{
 
@@ -84,11 +84,19 @@ impl Component for Model{
                     Msg::SwitchTo(Scene::ClientsList) => {
                       new_scene = Some(Scene::ClientsList);
   },
+                
                     unexpected => {
                         panic!("Unexpected message for settings scene: {:?}", unexpected);
                     }
                 }
-            }
+
+            },
+                Scene::CartList(_)=>{
+                        unimplemented!()
+                    },
+                Scene::ClientsList =>{
+                    unimplemented!()
+                }
 
            
         }
